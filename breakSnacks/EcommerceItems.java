@@ -5,7 +5,6 @@ public class EcommerceItems {
     private int quantity;
     private double price;
     private double totalPrice;
-    private String cashierName;
 
     public EcommerceItems(String name, int quantity, double amount, double totalPrice) {
         this.name = name;

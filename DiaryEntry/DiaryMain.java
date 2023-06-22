@@ -60,7 +60,6 @@ public class DiaryMain {
         String entryTitle = input("Enter entry title");
         String entryBody = input("Enter entry body");
         String id = input("Enter your id");
-//        diary.animatedDisplay("loading");
         diary.createEntry(entryTitle, entryBody, Integer.parseInt(id));
         diary.animatedDisplay("saving your entry");
 //        display("Entry created successfully");

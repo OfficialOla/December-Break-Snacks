@@ -53,4 +53,12 @@ public class Account {
                 3. Account balance: %s""",
          acctName, acctNumber, balance);
     }
+
+    public int getAcctNumber() {
+        return acctNumber;
+    }
+
+    public String getPin() {
+        return pin;
+    }
 }

@@ -1,16 +1,17 @@
 package FilesChapt15;
 
 import java.io.IOException;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Iterator;
+import java.util.Iterator; 
 
-public class DirectoryStream {
+public class DirectStream {
     public static void main(String[] args) {
         Path path = Path.of("C:\\Users\\ADMIN\\Desktop\\regnos");
-        try(java.nio.file.DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path)){
+        try(DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path)){
             Iterator<Path> iterator = directoryStream.iterator();
-            if (iterator.hasNext()){
+            while (iterator.hasNext()){
                 Path path1 = iterator.next();
                 System.out.println(path1.getFileSystem());
             }

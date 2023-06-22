@@ -12,7 +12,7 @@ public class Bank {
     }
     public Account checkAccount(int accountNumber) {
         accountNumber = accountNumber - 1;
-        System.out.println(accounts.toString());
+//        System.out.println(accounts.toString());
         return accounts.get(accountNumber);
 
     }
@@ -48,6 +48,14 @@ public class Bank {
 //        accounts.add(null);
         accounts.add(del, null);
 
+    }
+    public int getAccountNumber(String pin) {
+        for (Account account: accounts) {
+            if (account.getPin().equals(pin)) {
+                return account.getAcctNumber();
+            }
+        }
+        return 0;
     }
     public void checkAccountInfo(){
 

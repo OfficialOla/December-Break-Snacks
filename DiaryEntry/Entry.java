@@ -8,6 +8,11 @@ public class Entry {
 
     private String title;
     private String body;
+    private final LocalDateTime date = LocalDateTime.now();
+
+    public LocalDateTime getDate() {
+        return date;
+    }
 
     private int entryId;
 
@@ -45,7 +50,10 @@ public class Entry {
         return String.format("""
                 1. Entry Title: %s
                 2. Entry Body: %s
-                3. Entry Id: %s""",
-                title, body, entryId);
+                3. Entry Id: %s
+                4. Entry date: %s
+                5. Entry date 2: %s
+                """,
+                title, body, entryId, getDate(), checkDate());
     }
 }

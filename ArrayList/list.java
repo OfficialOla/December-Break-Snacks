@@ -1,2 +1,4 @@
-package ArrayList;public class list {
+package ArrayList;
+
+public class list<T> {
 }
